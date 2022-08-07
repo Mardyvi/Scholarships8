@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-c*kh=kyf&)+fgz23ir%!yrwe&e*f_@rm@wj$+v)+n6yk6dfe3+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #3rd apps:
+    'rest_framework',
+    #Local apps:
+    'organizacion',
+    'Comunidad',
     'becados',
+    'becas',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +81,7 @@ WSGI_APPLICATION = 'ScholarShips.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -82,6 +90,22 @@ DATABASES = {
         'PASSWORD': e6e1ed50225c38fd3a2f1ca15c2085b202d15b0e86107aaf55102ba9a7b3e49b,
         'HOST': ec2-54-161-255-125.compute-1.amazonaws.com,
         'PORT': 5432,
+    }
+}
+"""
+
+#postgres://ujgtozrmgvwvdc:a343e54ab3ea7e6348a47e10e7c0ae9794812122143167190a2bf7a660a07324@ec2-44-207-126-176.compute-1.amazonaws.com:5432/daqs8cpcigsj5a
+
+#postgres://ghwhenxmjofjab:961ae6d1889c7c8ba9ad43fe9463a9872c048c472f09d39b1b97c4ea11b22b74@ec2-34-193-44-192.compute-1.amazonaws.com:5432/dbi1qbss4q3ee6
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbi1qbss4q3ee6',
+        'USER':'ghwhenxmjofjab',
+        'PASSWORD':'961ae6d1889c7c8ba9ad43fe9463a9872c048c472f09d39b1b97c4ea11b22b74',
+        'HOST':'ec2-34-193-44-192.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
 
@@ -108,9 +132,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-MX'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 
@@ -126,3 +150,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
