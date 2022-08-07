@@ -4,13 +4,13 @@ from rest_framework.response import Response
 from .serializers import BecadoSerializer
 #from becas.model import becas
 
-class BecasDetailView(DetailView):
+'''class BecasDetailView(DetailView):
    context_object_name = 'becas'
    queryset = becas.objects.all()
    lookup_field = "area_de_interes", "grado_academico"
    
    def get_queryset(self):
-      return self.request.filter("area_de_interes", "grado_academico")
+      return self.request.filter("area_de_interes", "grado_academico")'''
    
 class PerfilView(UpdateView):
    context_object_name = 'Becado'
