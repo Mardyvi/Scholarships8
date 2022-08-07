@@ -1,22 +1,18 @@
 from django.db import models
 
-# Create your models here.
+def upload_img(instance, filename):
+    return f'imgs_org/{instance.nombre}/{filename}'
 
 class Organizacion(models.Model):
-    ROLES = (
-        ('Organizacion','Organizacion'),
-        ('organizacion','organizacion'),
-        ('Becado','Becado'),
-        ('becado','becado')
-    )
-
+    
     nombre = models.CharField(max_length=56)
     pais = models.CharField(max_length=32)
     area = models.CharField(max_length=256)
     email = models.EmailField(max_length=50, unique=True)
     web_page = models.URLField(max_length=256)
-    rol = models.CharField(max_length=50, choices=ROLES, null=True)
-    
+    tipo = models.BooleanField(default=False, verbose_name="Organización")
+    image = models.ImageField(upload_to=upload_img, default='imgs_org/default.png',null=True)
+
     class Meta:
         db_table = 'orgs'
     
