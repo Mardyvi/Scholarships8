@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 asgiref==3.5.2
 demo-nodes-py==0.9.3
@@ -20,3 +21,4 @@ pytz==2021.3
 setuptools==60.9.3; python_version >= '3.7'
 sqlparse==0.4.2; python_version >= '3.5'
 whitenoise==6.0.0
+
