@@ -21,7 +21,7 @@ class ListComunidad(APIView):
         print(comunidad)
         serializer = ComunidadSerializer(comunidad, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-
+'''
 class UpdateComunidad(APIView):
     def put(self, request, pk, format=None):
         comunidad = Comunidad.objects.get(pk=pk)
@@ -31,6 +31,7 @@ class UpdateComunidad(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+'''
 class DeleteComunidad(APIView):
     def delete(self, request, pk, format=None):
         comunidad = Comunidad.objects.get(pk=pk)
