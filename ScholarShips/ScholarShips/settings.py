@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'ScholarShips.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': detke5imc0tvkc,
+        'USER': ipnadkgmqhziqk,
+        'PASSWORD': e6e1ed50225c38fd3a2f1ca15c2085b202d15b0e86107aaf55102ba9a7b3e49b,
+        'HOST': ec2-54-161-255-125.compute-1.amazonaws.com,
+        'PORT': 5432,
     }
 }
 
