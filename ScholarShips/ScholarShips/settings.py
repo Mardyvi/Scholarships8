@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c*kh=kyf&)+fgz23ir%!yrwe&e*f_@rm@wj$+v)+n6yk6dfe3+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -73,10 +73,25 @@ WSGI_APPLICATION = 'ScholarShips.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+"""
+
+#postgres://ujgtozrmgvwvdc:a343e54ab3ea7e6348a47e10e7c0ae9794812122143167190a2bf7a660a07324@ec2-44-207-126-176.compute-1.amazonaws.com:5432/daqs8cpcigsj5a
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'daqs8cpcigsj5a',
+        'USER':'ujgtozrmgvwvdc',
+        'PASSWORD':'a343e54ab3ea7e6348a47e10e7c0ae9794812122143167190a2bf7a660a07324',
+        'HOST':'ec2-44-207-126-176.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
 
