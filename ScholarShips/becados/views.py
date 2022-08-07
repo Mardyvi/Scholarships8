@@ -1,9 +1,10 @@
 from becados.models import Becado
-from django.views.generic import DetailView, UpdateView
+from django.views.generic import DetailView
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import BecadoSerializer
-from rest_framework.decorators import APIView, renderer_classes
-from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
+from django.http import HttpResponse
+from rest_framework import status
 #from becas.model import becas
 
 '''class BecasDetailView(DetailView):
@@ -14,11 +15,10 @@ from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
    def get_queryset(self):
       return self.request.filter("area_de_interes", "grado_academico")'''
 
-class PerfilAPIView(UpdateView):
-   model = 'Becado'
-   serializer = BecadoSerializer
-   
-   def post (self, request):
-      'nombre', 'apellido_paterno', 'apellido_materno', 'correo_electronico', 'area_de_interes', 'grado_academico', 'Estatus'
-      return Response({"message": "Actualizado"})
+class PerfilAPIView(APIView):
+    def post(self, request):
+        serializer = BecadoSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
         
