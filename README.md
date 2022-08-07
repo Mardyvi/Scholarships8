@@ -1,2 +1,2 @@
 # Scholarships8
-Atracción y seguimiento de candidatos para becas de diferentes instituciones.
+Seguimiento de candidatos para becas de diferentes instituciones.
