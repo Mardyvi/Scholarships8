@@ -17,18 +17,11 @@ from xml.etree.ElementInclude import include
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
-<<<<<<< HEAD
-
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('comunidad/', include('Comunidad.urls'))
-]
-=======
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('organizacion/', include('organizacion.urls')),    
+    path('organizacion/', include('organizacion.urls')), 
+    path('comunidad/', include('Comunidad.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> develop
+

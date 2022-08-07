@@ -38,15 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD:ScholarShips/ScholarShips/settings/base.py
-    'rest_framework',
-    #local apps
-    'Comunidad' 
-=======
     #3rd apps:
     'rest_framework',
     #Local apps:
     'organizacion',
+    'Comunidad',
     
 >>>>>>> develop:ScholarShips/ScholarShips/settings.py
 ]
