@@ -14,3 +14,19 @@ class Beca(models.Model):
 
     def __str__(self):
         return self.becas
+
+
+
+"""
+class Newbeca(models.Model):
+
+    opcion = models.URLField(max_length=200, **options)
+
+    class URLValidator(schemes=None, regex=None, message=None, code=None)
+"""
+
+
+
+
+
+

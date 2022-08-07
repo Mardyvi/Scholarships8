@@ -87,13 +87,15 @@ DATABASES = {
 
 #postgres://ujgtozrmgvwvdc:a343e54ab3ea7e6348a47e10e7c0ae9794812122143167190a2bf7a660a07324@ec2-44-207-126-176.compute-1.amazonaws.com:5432/daqs8cpcigsj5a
 
+#postgres://ghwhenxmjofjab:961ae6d1889c7c8ba9ad43fe9463a9872c048c472f09d39b1b97c4ea11b22b74@ec2-34-193-44-192.compute-1.amazonaws.com:5432/dbi1qbss4q3ee6
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'daqs8cpcigsj5a',
-        'USER':'ujgtozrmgvwvdc',
-        'PASSWORD':'a343e54ab3ea7e6348a47e10e7c0ae9794812122143167190a2bf7a660a07324',
-        'HOST':'ec2-44-207-126-176.compute-1.amazonaws.com',
+        'NAME': 'dbi1qbss4q3ee6',
+        'USER':'ghwhenxmjofjab',
+        'PASSWORD':'961ae6d1889c7c8ba9ad43fe9463a9872c048c472f09d39b1b97c4ea11b22b74',
+        'HOST':'ec2-34-193-44-192.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
