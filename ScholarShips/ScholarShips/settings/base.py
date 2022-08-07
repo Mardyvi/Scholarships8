@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'organizacion',
     'Comunidad',
     
->>>>>>> develop:ScholarShips/ScholarShips/settings.py
+#>>>>>>> develop:ScholarShips/ScholarShips/settings.py
 ]
 
 MIDDLEWARE = [
