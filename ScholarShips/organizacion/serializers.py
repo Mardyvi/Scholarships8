@@ -8,15 +8,12 @@ class OrgSerializer(serializers.ModelSerializer):
         model = Organizacion
         fields = '__all__'
 
-'''class RolSerializer(serializers.ModelSerializer):
+class OrgListSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Rol
-        fields = ["role"]
+        model = Organizacion
+        fields = (
+            'id',
+            'nombre',
+            'image'
+            )
 
-    def to_representation(self, instance):
-        response = super().to_representation(instance)
-        response['role'] = OrgSerializer(instance.role).data
-        return response
-'''       
-
-        
