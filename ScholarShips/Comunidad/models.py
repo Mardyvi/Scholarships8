@@ -1,4 +1,5 @@
 from django.db import models
+#from beca.models import Beca
 
 # Create your models here.
 
