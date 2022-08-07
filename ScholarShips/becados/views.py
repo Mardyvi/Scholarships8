@@ -1,5 +1,5 @@
 from becados.models import Becado
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView
 from rest_framework.response import Response
 from .serializers import BecadoSerializer
 #from becas.model import becas
