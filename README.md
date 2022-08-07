@@ -1,2 +1,2 @@
 # Scholarships8
-Seguimiento de candidatos para becas de diferentes instituciones.
+Seguimiento de becados de diferentes instituciones.
